@@ -1,163 +1,349 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zegan Heyman | Fraud Monitoring & Compliance Specialist</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#0b0f19;--card:#111827;--text:#ffffff;--muted:#9ca3af;--accent:#22c55e}
-*{box-sizing:border-box}
-body{margin:0;font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-header{padding:80px 20px;text-align:center;background:linear-gradient(180deg,#111827,#0b0f19)}
-.profile-pic{width:140px;height:140px;border-radius:50%;object-fit:cover;margin-bottom:20px;border:3px solid #1f2937;box-shadow:0 6px 20px rgba(0,0,0,0.4)}
-h1{font-size:40px;margin-bottom:10px}
-.tagline{color:var(--muted);font-size:18px}
-nav{position:sticky;top:0;background:#0b0f19;padding:10px;text-align:center;border-bottom:1px solid #1f2937;z-index:1000}
-nav a{color:var(--muted);margin:0 15px;text-decoration:none;font-size:14px}
-nav a:hover{color:var(--text)}
-section{max-width:1120px;margin:auto;padding:48px 24px;border-bottom:1px solid #111827}
-h2{margin-bottom:20px;border-bottom:1px solid #1f2937;padding-bottom:10px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
-.card{background:var(--card);padding:24px;border-radius:14px;box-shadow:0 6px 18px rgba(0,0,0,0.25);transition:transform 0.25s;margin-bottom:16px}
-.card:hover{transform:translateY(-5px)}
-ul{padding-left:18px;margin-top:8px}
-.btn{background:var(--accent);padding:12px 20px;border-radius:8px;color:#000;font-weight:600;text-decoration:none}
-.contact{text-align:center}
-footer{text-align:center;padding:30px;color:var(--muted);border-top:1px solid #1f2937}
-.fade{opacity:0;transform:translateY(20px);transition:all 0.6s ease}
-.fade.show{opacity:1;transform:translateY(0)}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Zegan Heyman — Fraud, AML and Merchant Risk specialist with 20+ years in financial services and 9+ years in merchant acquiring.">
+  <meta name="theme-color" content="#101a2b">
+  <title>Zegan Heyman | Fraud, AML & Merchant Risk</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b1220; --surface: #111c2e; --surface-2: #16243a;
+      --text: #f3f6fb; --muted: #a8b5c8; --line: rgba(185,204,230,.14);
+      --accent: #69d3c2; --accent-2: #9be7da; --max: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 86px; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: "DM Sans", sans-serif; line-height: 1.7; }
+    a { color: inherit; }
+    .wrap { width: min(var(--max), calc(100% - 44px)); margin: 0 auto; }
+    .topbar { position: sticky; top: 0; z-index: 20; background: rgba(11,18,32,.92); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+    .nav { min-height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { font: 800 15px Manrope, sans-serif; letter-spacing: .04em; text-decoration: none; }
+    .brand span { color: var(--accent); }
+    .navlinks { display: flex; align-items: center; flex-wrap: wrap; gap: 22px; }
+    .navlinks a { color: var(--muted); font-size: 13px; text-decoration: none; }
+    .navlinks a:hover { color: var(--accent); }
+    .hero { padding: 86px 0 78px; background: radial-gradient(ellipse at 78% 10%, rgba(105,211,194,.12), transparent 38%), linear-gradient(135deg,#101d31 0%,#0b1220 68%); }
+    .hero-grid { display: grid; grid-template-columns: 1.35fr .65fr; gap: 56px; align-items: center; }
+    .eyebrow { color: var(--accent); font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+    h1,h2,h3 { font-family: Manrope, sans-serif; line-height: 1.2; }
+    h1 { max-width: 760px; margin: 16px 0; font-size: clamp(38px, 5vw, 62px); letter-spacing: -.045em; }
+    .hero-role { color: var(--accent-2); font: 600 clamp(16px,2vw,20px) Manrope,sans-serif; }
+    .hero-copy { max-width: 700px; margin: 20px 0 28px; color: var(--muted); font-size: 17px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 11px 19px; border-radius: 7px; font-weight: 700; font-size: 14px; text-decoration: none; transition: .2s ease; }
+    .btn-primary { background: var(--accent); color: #08201d; }
+    .btn-primary:hover { background: var(--accent-2); transform: translateY(-2px); }
+    .btn-outline { border: 1px solid rgba(155,231,218,.45); color: var(--text); }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+    .portrait-wrap { justify-self: end; padding: 10px; border: 1px solid var(--line); border-radius: 22px; background: rgba(255,255,255,.025); }
+    .portrait { display: block; width: min(100%, 270px); aspect-ratio: 4/5; object-fit: cover; border-radius: 14px; filter: saturate(.82); }
+    .stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin-top: 46px; max-width: 640px; }
+    .stat { padding: 15px 17px; border-left: 2px solid var(--accent); background: rgba(255,255,255,.035); }
+    .stat strong { display: block; font: 800 25px Manrope,sans-serif; }
+    .stat span { color: var(--muted); font-size: 12px; }
+    section { padding: 76px 0; border-bottom: 1px solid var(--line); }
+    .section-head { max-width: 720px; margin-bottom: 30px; }
+    .section-head h2 { margin: 9px 0 12px; font-size: clamp(27px,3vw,36px); letter-spacing: -.025em; }
+    .section-head p { margin: 0; color: var(--muted); }
+    .about-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 22px; }
+    .panel, .card { background: var(--surface); border: 1px solid var(--line); border-radius: 13px; padding: 25px; }
+    .panel p { margin-top: 0; color: var(--muted); }
+    .panel p:last-child { margin-bottom: 0; }
+    .principles { display: grid; gap: 12px; }
+    .principle { padding: 16px 18px; border-radius: 10px; background: var(--surface-2); }
+    .principle strong { display: block; font-family: Manrope,sans-serif; margin-bottom: 3px; }
+    .principle span { color: var(--muted); font-size: 13px; }
+    .grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; }
+    .card { transition: transform .2s ease, border-color .2s ease; }
+    .card:hover { transform: translateY(-3px); border-color: rgba(105,211,194,.45); }
+    .card .number { color: var(--accent); font: 800 12px Manrope,sans-serif; letter-spacing: .12em; }
+    .card h3 { margin: 10px 0 8px; font-size: 19px; }
+    .card p, .card li { color: var(--muted); font-size: 14px; }
+    .card p { margin-bottom: 0; }
+    .card ul { padding-left: 18px; margin-bottom: 0; }
+    .achievement-list { display: grid; grid-template-columns: repeat(2,1fr); gap: 14px; }
+    .achievement { display: flex; gap: 14px; padding: 19px; background: var(--surface); border: 1px solid var(--line); border-radius: 11px; }
+    .check { flex: 0 0 26px; height: 26px; display: grid; place-items: center; border-radius: 50%; background: rgba(105,211,194,.13); color: var(--accent); font-weight: 800; }
+    .achievement p { margin: 0; color: var(--muted); font-size: 14px; }
+    .timeline { display: grid; gap: 16px; }
+    .job { display: grid; grid-template-columns: 210px 1fr; gap: 25px; padding: 23px 0; border-bottom: 1px solid var(--line); }
+    .job:last-child { border-bottom: 0; }
+    .job-date { color: var(--accent); font-size: 13px; font-weight: 700; }
+    .job h3 { margin: 0 0 4px; font-size: 19px; }
+    .company { color: var(--muted); font-size: 14px; }
+    .job p, .job li { color: var(--muted); font-size: 14px; }
+    .job p { margin: 10px 0; }
+    .job ul { padding-left: 18px; margin: 8px 0 0; }
+    .job li { margin: 5px 0; }
+    .subhead { color: var(--text); font-size: 13px; font-weight: 700; margin-top: 13px; }
+    .skills { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; }
+    .skill-group h3 { margin: 0 0 12px; font-size: 17px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { padding: 7px 11px; color: #c9d6e7; border: 1px solid var(--line); border-radius: 6px; background: rgba(255,255,255,.025); font-size: 12px; }
+    .education { display: grid; grid-template-columns: repeat(2,1fr); gap: 12px; }
+    .education .card { padding: 18px 20px; }
+    .education strong { display: block; font-size: 14px; }
+    .education span { color: var(--muted); font-size: 13px; }
+    .contact { text-align: center; background: radial-gradient(ellipse at center, rgba(105,211,194,.09), transparent 55%); }
+    .contact .section-head { margin-left: auto; margin-right: auto; }
+    .contact-details { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 26px; margin: 25px 0; color: var(--muted); }
+    .contact-details a { color: var(--accent-2); text-decoration: none; }
+    footer { padding: 25px 0; color: var(--muted); font-size: 12px; text-align: center; }
+    @media (max-width: 760px) {
+      .nav { align-items: flex-start; flex-direction: column; padding: 15px 0; gap: 10px; }
+      .navlinks { gap: 13px; }
+      .hero { padding: 58px 0; }
+      .hero-grid, .about-grid { grid-template-columns: 1fr; }
+      .portrait-wrap { justify-self: start; grid-row: 1; }
+      .portrait { width: 170px; aspect-ratio: 1; border-radius: 50%; }
+      .stats { margin-top: 30px; }
+      .grid, .achievement-list, .skills, .education { grid-template-columns: 1fr; }
+      .job { grid-template-columns: 1fr; gap: 5px; }
+      section { padding: 58px 0; }
+    }
+    @media (max-width: 420px) {
+      .wrap { width: min(100% - 30px, var(--max)); }
+      .stats { grid-template-columns: 1fr; }
+      .navlinks a { font-size: 12px; }
+    }
+  </style>
 </head>
 <body>
+  <div class="topbar">
+    <nav class="nav wrap" aria-label="Main navigation">
+      <a class="brand" href="#home">ZEGAN<span>.</span>HEYMAN</a>
+      <div class="navlinks">
+        <a href="#about">Profile</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
 
-<nav>
-<a href="#about">About</a>
-<a href="#expertise">Expertise</a>
-<a href="#experience">Experience</a>
-<a href="#projects">Case Studies</a>
-<a href="#contact">Contact</a>
-</nav>
+  <header class="hero" id="home">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">Payments • Risk • People</div>
+          <h1>Building stronger risk controls. Developing stronger teams.</h1>
+          <div class="hero-role">Fraud, AML &amp; Merchant Risk Specialist | Learning &amp; Development Enthusiast | Coach</div>
+          <p class="hero-copy">I bring more than 20 years of financial services experience, including 9+ years in merchant acquiring. My work connects day-to-day merchant risk, onboarding and monitoring with the frameworks, processes and training that help teams apply controls consistently.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="Zegan_Heyman_CV.pdf" download>Download my CV</a>
+            <a class="btn btn-outline" href="#contact">Get in touch</a>
+          </div>
+          <div class="stats">
+            <div class="stat"><strong>20+</strong><span>Years in financial services</span></div>
+            <div class="stat"><strong>9+</strong><span>Years in merchant acquiring</span></div>
+            <div class="stat"><strong>60%</strong><span>Bad debt exposure reduction achieved</span></div>
+          </div>
+        </div>
+        <div class="portrait-wrap">
+          <img class="portrait" src="profile.jpg" alt="Portrait of Zegan Heyman">
+        </div>
+      </div>
+    </div>
+  </header>
 
-<header>
-<img src="profile.jpg" alt="Zegan Heyman" class="profile-pic">
-<h1>Zegan Heyman</h1>
-<p class="tagline">Fraud Monitoring | AML | Transaction Monitoring | Compliance</p>
-<p>Designing and optimising fraud detection, AML monitoring, and risk frameworks in payment environments</p>
-<br>
-<a class="btn" href="#contact">Contact Me</a>
-<br><br>
-<a class="btn" href="Zegan_Heyman_CV.pdf" download>Download CV (PDF)</a>
-</header>
+  <main>
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Professional profile</div>
+          <h2>Risk expertise, translated into practical delivery.</h2>
+        </div>
+        <div class="about-grid">
+          <div class="panel">
+            <p>I am a fraud and onboarding manager and Learning &amp; Development specialist working across merchant acquiring, payments and financial services.</p>
+            <p>I run merchant onboarding, due diligence, fraud and AML monitoring, and chargeback activities. I also turn lessons from incidents, audits and onboarding into risk frameworks, RMCPs, policies, SOPs, process maps and training that teams can use in their day-to-day work.</p>
+            <p>My approach is practical: understand the risk, make the control workable, help people understand why it matters, and keep improving how it operates.</p>
+          </div>
+          <div class="principles">
+            <div class="principle"><strong>Operationally grounded</strong><span>Controls designed around real merchant, payment and operational risks.</span></div>
+            <div class="principle"><strong>Risk-based</strong><span>Proportionate onboarding, due diligence and monitoring approaches.</span></div>
+            <div class="principle"><strong>People-focused</strong><span>Training and enablement that help teams apply controls with confidence.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section id="about" class="fade">
-<h2>Professional Summary</h2>
-<div class="card">
-<p>Fraud & Compliance Specialist with 10+ years’ experience across card payments, merchant acquiring, and financial services. Proven expertise in fraud monitoring, AML transaction monitoring, and regulatory compliance.</p>
-<p>Experienced in designing monitoring frameworks, analysing fraud trends, and implementing controls to reduce losses, improve detection rates, and ensure compliance with regulatory and card scheme requirements.</p>
-</div>
-</section>
+    <section id="expertise">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Areas of expertise</div>
+          <h2>Where I add value</h2>
+          <p>A blend of hands-on risk delivery, acquiring knowledge and learning design.</p>
+        </div>
+        <div class="grid">
+          <article class="card"><div class="number">01 / MERCHANT RISK</div><h3>Merchant onboarding &amp; due diligence</h3><p>Application assessment, background checks, onboarding scorecards, merchant risk assessment, underwriting and partner onboarding across ISO and PayFac models.</p></article>
+          <article class="card"><div class="number">02 / FINANCIAL CRIME</div><h3>Fraud &amp; AML monitoring</h3><p>Fraud risk monitoring, transaction monitoring, incident analysis, risk indicators, escalation practices and ongoing merchant oversight.</p></article>
+          <article class="card"><div class="number">03 / GOVERNANCE</div><h3>Compliance &amp; control frameworks</h3><p>Acquiring risk lifecycles, RMCP development, policies, SOPs, process maps, FICA obligations, card scheme requirements and PCI-DSS readiness.</p></article>
+          <article class="card"><div class="number">04 / PEOPLE &amp; ENABLEMENT</div><h3>Learning &amp; development</h3><p>Instructional design, learning needs analysis, workshops, online video, PowerPoint learning material, awareness campaigns and partner training.</p></article>
+        </div>
+      </div>
+    </section>
 
-<section id="projects" class="fade">
-<h2>Key Case Studies</h2>
-<div class="grid">
-<div class="card">
-<h3 style="margin-bottom:6px;">Fraud Monitoring Optimisation</h3 style="margin-bottom:6px;">
-<p>Redesigned fraud detection rules and monitoring processes, improving detection capability and reducing fraud exposure through enhanced rule logic and operational alignment.</p>
-</div>
-<div class="card">
-<h3 style="margin-bottom:6px;">Onboarding Risk Controls</h3 style="margin-bottom:6px;">
-<p>Enhanced onboarding controls and monitoring frameworks to improve visibility of high-risk merchants and ensure stronger compliance with regulatory and internal risk requirements.</p>
-</div>
-<div class="card">
-<h3 style="margin-bottom:6px;">Bad Debt Reduction</h3 style="margin-bottom:6px;">
-<p>Reduced bad debt exposure by up to 60% through improved credit risk monitoring, early risk identification, and strengthened control implementation.</p>
-</div>
-</div>
+    <section id="achievements">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Selected achievements</div>
+          <h2>Outcomes that matter</h2>
+        </div>
+        <div class="achievement-list">
+          <div class="achievement"><span class="check">✓</span><p>Built a complete acquiring risk lifecycle that became the blueprint for POS policies, SOPs, process maps and the learning framework, and was later adapted for a compliant e-commerce business.</p></div>
+          <div class="achievement"><span class="check">✓</span><p>Drafted an RMCP specific to the acquiring business, recognising that its risk profile differs from the wider group.</p></div>
+          <div class="achievement"><span class="check">✓</span><p>Designed and implemented a fraud risk monitoring framework, supported by training to improve detection capability across teams.</p></div>
+          <div class="achievement"><span class="check">✓</span><p>Improved merchant onboarding outcomes by 50% through stronger risk controls and targeted training.</p></div>
+          <div class="achievement"><span class="check">✓</span><p>Reduced bad debt exposure by up to 60% by embedding risk awareness and training into operational processes.</p></div>
+          <div class="achievement"><span class="check">✓</span><p>Created training material for ISO and PayFac partners and launched a staff fraud awareness week.</p></div>
+        </div>
+      </div>
+    </section>
 
-<div class="card" style="margin-top:28px;">
-<h3 style="margin-bottom:6px;">Training & Development for Fraud & Compliance Monitoring</h3 style="margin-bottom:6px;">
-<ul>
-<li>Designed and delivered targeted training programmes to improve fraud detection, transaction monitoring, and escalation quality across operational teams.</li>
-<li>Translated AML and fraud monitoring requirements into practical learning modules to ensure consistent application of controls.</li>
-<li>Embedded training into onboarding and operational processes to strengthen first-line defence and reduce control breakdowns.</li>
-<li>Improved team capability in identifying suspicious patterns, anomalies, and high-risk behaviours within transaction data.</li>
-</ul>
-</div>
-</section>
+    <section id="portfolio">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Selected work</div>
+          <h2>How I approach the work</h2>
+          <p>High-level examples of work themes and outcomes. No confidential employer information, internal thresholds or proprietary monitoring logic is published here.</p>
+        </div>
+        <div class="grid">
+          <article class="card"><div class="number">PORTFOLIO / 01</div><h3>Acquiring risk lifecycle</h3><p>Developed an end-to-end acquiring risk lifecycle to connect merchant onboarding, due diligence, monitoring, operational controls, policies, SOPs, process maps and learning material.</p></article>
+          <article class="card"><div class="number">PORTFOLIO / 02</div><h3>Acquiring-specific RMCP</h3><p>Translated the acquiring business's distinct risk profile into a dedicated RMCP foundation, supporting a more relevant and risk-based compliance approach.</p></article>
+          <article class="card"><div class="number">PORTFOLIO / 03</div><h3>Fraud monitoring &amp; enablement</h3><p>Combined monitoring framework development with incident learning and targeted training to strengthen detection capability and improve how teams identify and escalate risk.</p></article>
+          <article class="card"><div class="number">PORTFOLIO / 04</div><h3>Partner and merchant learning</h3><p>Developed onboarding and training content for ISO and PayFac partners and merchants, translating risk and compliance expectations into practical guidance.</p></article>
+          <article class="card"><div class="number">PORTFOLIO / 05</div><h3>Industry insight &amp; position papers</h3><p>Researched and published position papers on accountable institution obligations under FICA and acquirer obligations under Visa and Mastercard, informing strategy and client discussions.</p></article>
+          <article class="card"><div class="number">PORTFOLIO / 06</div><h3>Operational process improvement</h3><p>Started documenting operational process flows to improve efficiency and clarify hand-offs, particularly where multiple cross-functional teams work together.</p></article>
+        </div>
+      </div>
+    </section>
 
-<section id="experience" class="fade">
-<h2>Experience</h2>
-<div class="card">
-<h3 style="margin-bottom:6px;">Efficacy Payment (Pty) Ltd</h3 style="margin-bottom:6px;">
-<p><strong>Fraud &amp; Credit Risk Manager | Aug 2022 – May 2026</strong></p>
-<ul>
-<li>Designed and optimised fraud monitoring rules and control frameworks to strengthen fraud detection capability and reduce exposure across the payment environment.</li>
-<li>Analysed transaction trends, merchant behaviour, and emerging risk indicators to identify suspicious patterns and support proactive intervention.</li>
-<li>Implemented AML and transaction monitoring controls aligned to internal risk appetite, regulatory obligations, and operational requirements.</li>
-<li>Produced fraud, credit risk, and compliance reporting to support management decision-making, monitoring priorities, and continuous improvement initiatives.</li>
-<li>Identified control weaknesses through incident analysis and process reviews, then implemented corrective actions to strengthen the overall monitoring environment.</li>
-<li>Developed structured frameworks and learning content to support the onboarding of merchants, ISOs, and PayFac partners with stronger risk and compliance alignment.</li>
-<li>Collaborated with product, operations, and technology teams to embed fraud, AML, and compliance controls into systems, workflows, and onboarding journeys.</li>
-<li>Supported the development and implementation of compliance programmes, including RMCP-related control and awareness initiatives.</li>
-<li>Designed and delivered fraud, AML, and cybersecurity awareness sessions to improve risk identification, escalation quality, and cross-functional understanding of control requirements.</li>
-</ul>
-</div>
-<div class="card">
-<h3 style="margin-bottom:6px;">Bidvest Bank Merchant Services</h3 style="margin-bottom:6px;">
-<p><strong>Credit Risk Manager | Aug 2017 – Jul 2022</strong></p>
-<ul>
-<li>Developed and enhanced merchant risk monitoring processes to strengthen oversight across onboarding, underwriting, and ongoing portfolio management.</li>
-<li>Conducted merchant and portfolio risk assessments to identify financial crime, fraud, credit, and compliance concerns within acquiring and card payment environments.</li>
-<li>Translated policy, card scheme, and regulatory requirements into practical controls, operating guides, and monitoring approaches for business application.</li>
-<li>Identified process and control gaps through audits, reviews, and operational analysis, and implemented mitigation strategies to improve control effectiveness.</li>
-<li>Supported PCI-DSS and broader compliance audit readiness by strengthening documentation, awareness, and operational alignment to required standards.</li>
-<li>Worked closely with internal stakeholders and external partners to improve understanding of merchant onboarding risk, compliance obligations, and fraud prevention measures.</li>
-<li>Contributed to automated onboarding and control enhancements that improved consistency in risk assessment and application of governance requirements.</li>
-<li>Used reporting, analysis, and process mapping to improve operational consistency, monitoring visibility, and quality of risk-based decision-making.</li>
-</ul>
-</div>
-<div class="card">
-<h3 style="margin-bottom:6px;">Bidvest Bank Merchant Services</h3 style="margin-bottom:6px;">
-<p><strong>Acting Operations Manager | Mar 2022 – Jul 2022</strong></p>
-<ul>
-<li>Led day-to-day team oversight, workflow coordination, and capability support within an operational risk environment.</li>
-<li>Implemented structured coaching and knowledge-sharing practices to improve consistency, performance, and risk awareness across the team.</li>
-<li>Supported performance improvement through targeted guidance, process alignment, and reinforcement of compliance and control expectations.</li>
-<li>Ensured stronger alignment between operational delivery, control execution, and broader fraud and compliance objectives.</li>
-</ul>
-</div>
-<div class="card">
-<h3 style="margin-bottom:6px;">Earlier Career</h3 style="margin-bottom:6px;">
-<p><strong>First Data Resources | Credit Risk Analyst</strong><br><strong>Nedbank | Fraud Detection Operations Manager</strong><br><strong>Nedbank | Fraud Detection &amp; Card Operations Roles</strong><br>2004 – 2022</p>
-<ul>
-<li>Built foundational experience across fraud detection operations, card operations, and credit risk within established financial services environments.</li>
-<li>Developed practical expertise in monitoring, investigations, operational controls, and risk-based decision-making across the fraud and payments value chain.</li>
-</ul>
-</div>
-</section>
+    <section id="experience">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Career history</div>
+          <h2>Professional experience</h2>
+        </div>
+        <div class="timeline">
+          <article class="job">
+            <div class="job-date">JUN 2026 — PRESENT</div>
+            <div><h3>Fraud &amp; Onboarding Manager</h3><div class="company">Paycorp (Pty) Ltd</div>
+              <p>Responsible for merchant onboarding and risk in the POS acquiring business, including application assessment, due diligence, fraud and risk monitoring, chargebacks and compliance.</p>
+              <div class="subhead">Risk delivery</div>
+              <ul>
+                <li>Run merchant onboarding and risk processes, including application review, due diligence, background checks and the onboarding scorecard.</li>
+                <li>Work with the transaction monitoring vendor to improve real-time monitoring for fraud and AML requirements.</li>
+                <li>Monitor merchants for fraud, risk and non-compliance, and manage chargebacks within required timelines.</li>
+                <li>Drafted the acquiring risk lifecycle, RMCP, policies, SOPs and process maps.</li>
+                <li>Started documenting operational process flows to improve cross-functional efficiency.</li>
+              </ul>
+              <div class="subhead">Learning &amp; enablement</div>
+              <ul>
+                <li>Drafted training material for ISO and PayFac partners, launched a staff fraud awareness week and started an AI-supported industry news publication for stakeholders and staff.</li>
+                <li>Researched and published position papers on FICA accountable institution obligations and Visa and Mastercard acquirer obligations.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="job">
+            <div class="job-date">AUG 2022 — MAY 2026</div>
+            <div><h3>Fraud &amp; Credit Risk Manager</h3><div class="company">Efficacy Payment (Pty) Ltd</div>
+              <p>Owned fraud and credit risk for a payments business, including partner and merchant onboarding, and trained the teams who applied the controls.</p>
+              <ul>
+                <li>Analysed fraud incidents to identify control weaknesses and improve systems and processes.</li>
+                <li>Produced risk reporting to support management decisions and training priorities.</li>
+                <li>Worked with product and IT teams to build risk controls into system and process design.</li>
+                <li>Supported development of the RMCP compliance programme.</li>
+                <li>Designed and delivered fraud, AML and cybersecurity training through online video, PowerPoint and in-person sessions.</li>
+                <li>Built onboarding content and frameworks for ISO, PayFac and merchant partners, and facilitated workshops on detection and escalation.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="job">
+            <div class="job-date">AUG 2017 — JUL 2022</div>
+            <div><h3>Credit Risk Manager</h3><div class="company">Bidvest Bank Merchant Services</div>
+              <p>Managed merchant credit and fraud risk, including underwriting, onboarding risk assessment, card scheme and regulatory compliance.</p>
+              <ul>
+                <li>Assessed merchant risk and applied underwriting policy within card scheme and regulatory requirements.</li>
+                <li>Worked with audit teams on AML controls and PCI-DSS readiness, mapping processes to close gaps.</li>
+                <li>Designed and delivered risk and compliance training, onboarding content and operational guides for internal teams and external partners.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="job">
+            <div class="job-date">MAR 2022 — JUL 2022</div>
+            <div><h3>Acting Operations Manager</h3><div class="company">Bidvest Bank Merchant Services</div>
+              <p>Led the operations team, using coaching and targeted training to improve performance and risk awareness.</p>
+            </div>
+          </article>
+          <article class="job">
+            <div class="job-date">2004 — 2017</div>
+            <div><h3>Earlier career</h3><div class="company">First Data Resources • Nedbank</div>
+              <ul>
+                <li>First Data Resources — Credit Risk Analyst.</li>
+                <li>Nedbank — Fraud Detection Operations Manager.</li>
+                <li>Nedbank — Fraud Detection and Card Operations roles.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<section id="contact" class="fade contact">
-<h2>Contact</h2>
-<p>📞 +27 82 677 4491</p>
-<p>📧 zeganh@gmail.com</p>
-<br>
-<a class="btn" href="https://wa.me/27826774491" target="_blank">WhatsApp Me</a>
-</section>
+    <section id="skills">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Capabilities</div>
+          <h2>Skills &amp; tools</h2>
+        </div>
+        <div class="skills">
+          <div class="card skill-group"><h3>Risk &amp; onboarding</h3><div class="tags"><span class="tag">Merchant onboarding</span><span class="tag">Due diligence</span><span class="tag">Onboarding scorecards</span><span class="tag">Fraud monitoring</span><span class="tag">AML transaction monitoring</span><span class="tag">Chargebacks</span><span class="tag">Credit risk &amp; underwriting</span><span class="tag">FICA</span><span class="tag">Visa &amp; Mastercard acquirer rules</span><span class="tag">PCI-DSS</span><span class="tag">RMCP</span></div></div>
+          <div class="card skill-group"><h3>Learning &amp; development</h3><div class="tags"><span class="tag">Instructional design</span><span class="tag">Learning needs analysis</span><span class="tag">Facilitation</span><span class="tag">Workshops</span><span class="tag">Online video</span><span class="tag">PowerPoint decks</span><span class="tag">In-person sessions</span><span class="tag">Awareness campaigns</span></div></div>
+          <div class="card skill-group"><h3>Tools &amp; technology</h3><div class="tags"><span class="tag">Claude</span><span class="tag">Copilot</span><span class="tag">ChatGPT</span><span class="tag">Advanced PowerPoint</span><span class="tag">Excel</span><span class="tag">Process mapping</span><span class="tag">Transaction monitoring systems</span><span class="tag">LMS exposure</span></div></div>
+          <div class="card skill-group"><h3>Languages</h3><div class="tags"><span class="tag">English</span><span class="tag">Afrikaans</span></div></div>
+        </div>
+      </div>
+    </section>
 
-<footer>
-<p>© 2026 Zegan Heyman | Fraud Monitoring & Compliance Specialist</p>
-</footer>
+    <section id="education">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">Education &amp; development</div><h2>Ongoing learning</h2></div>
+        <div class="education">
+          <div class="card"><strong>University of Stellenbosch</strong><span>Certificate in Fundamentals of Risk Management · 2021</span></div>
+          <div class="card"><strong>UNISA</strong><span>Certificate in Banking &amp; Risk Management · 2012</span></div>
+          <div class="card"><strong>UNISA</strong><span>First Line Management · 2011</span></div>
+          <div class="card"><strong>Udemy</strong><span>FinTech, Open Banking, PSD2 and GDPR</span></div>
+        </div>
+      </div>
+    </section>
 
-<script>
-const faders=document.querySelectorAll('.fade');
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('show')}})
-},{threshold:0.2});
-faders.forEach(f=>observer.observe(f));
-</script>
+    <section id="contact" class="contact">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Let's connect</div>
+          <h2>Good risk work starts with a conversation.</h2>
+          <p>For professional enquiries, collaboration or a conversation about fraud, merchant risk, compliance and learning.</p>
+        </div>
+        <div class="contact-details">
+          <span>Phone: <a href="tel:+27826774491">+27 82 677 4491</a></span>
+          <span>Email: <a href="mailto:zeganh@gmail.com">zeganh@gmail.com</a></span>
+        </div>
+        <div class="actions" style="justify-content:center">
+          <a class="btn btn-primary" href="mailto:zeganh@gmail.com">Email me</a>
+          <a class="btn btn-outline" href="https://wa.me/27826774491" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <a class="btn btn-outline" href="Zegan_Heyman_CV.pdf" download>Download CV (PDF)</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
+  <footer><div class="wrap">© 2026 Zegan Heyman · Fraud, AML &amp; Merchant Risk · Johannesburg, South Africa</div></footer>
 </body>
 </html>
-
-
